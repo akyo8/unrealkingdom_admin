@@ -1,7 +1,5 @@
 import React from "react";
 import "../../assets/css/login.css";
-import { Link } from "react-router-dom";
-import axios from "axios";
 import authLayout from "../../hoc/authLayout";
 import Button from "@restart/ui/esm/Button";
 
@@ -16,6 +14,7 @@ class LoginPage extends React.Component {
 
     this.handleEmailUpdate = this.handleEmailUpdate.bind(this);
     this.handlePasswordUpdate = this.handlePasswordUpdate.bind(this);
+    localStorage.isAuthenticated = false;
   }
 
   handleEmailUpdate(event) {
@@ -27,41 +26,48 @@ class LoginPage extends React.Component {
   }
 
   submitLogin() {
-    console.log(this.state.email);
     const params = {
       email: this.state.email,
       password: this.state.password,
     };
 
-    axios
-      .post(process.env.REACT_APP_API_URL + "login", params)
-      .then((res) => {
-        if (res.status === 200) {
-          // when login success, currently redirect to empty page but we can add actions later
+    if (
+      this.state.email === process.env.REACT_APP_ADMIN_EMAIL &&
+      this.state.password === process.env.REACT_APP_ADMIN_PASSWORD
+    ) {
+      console.log("test");
+      localStorage.isAuthenticated = true;
+      window.location = "/user";
+    }
+    // axios
+    //   .post(process.env.REACT_APP_API_URL + "login", params)
+    //   .then((res) => {
+    //     if (res.status === 200) {
+    //       // when login success, currently redirect to empty page but we can add actions later
 
-          localStorage.isAuthenticated = true;
-          window.location = "/dashboard";
+    //       localStorage.isAuthenticated = true;
+    //       window.location = "/user";
 
-          console.log("success");
-        } else {
-          this.setState({
-            errors: { message: res.data.msg },
-          });
-        }
-      })
-      .catch((err) => {
-        if (
-          err.response.status === 401 ||
-          err.response.status === 404 ||
-          err.response.status === 403 ||
-          err.response.status === 400
-        ) {
-          this.setState({
-            errors: { message: err.response.data.msg },
-          });
-        }
-        console.log("login data submit error: ", err);
-      });
+    //       console.log("success");
+    //     } else {
+    //       this.setState({
+    //         errors: { message: res.data.msg },
+    //       });
+    //     }
+    //   })
+    //   .catch((err) => {
+    //     if (
+    //       err.response.status === 401 ||
+    //       err.response.status === 404 ||
+    //       err.response.status === 403 ||
+    //       err.response.status === 400
+    //     ) {
+    //       this.setState({
+    //         errors: { message: err.response.data.msg },
+    //       });
+    //     }
+    //     console.log("login data submit error: ", err);
+    //   });
   }
 
   render() {

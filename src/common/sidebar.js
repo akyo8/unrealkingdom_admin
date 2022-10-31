@@ -16,6 +16,7 @@ class Sidebar extends React.Component {
         <div className="sidebar-heading border-bottom ">
           <Link to="/">
             <img
+              style={{ width: 100, height: 100 }}
               alt="Alt content"
               src={require("./../assets/images/logo.png")}
             />
@@ -24,38 +25,50 @@ class Sidebar extends React.Component {
         <PerfectScrollbar className="sidebar-items">
           <ul className="list-unstyled ps-0">
             <li className="mb-1">
-              <Link tag="a" className="" to="/">
-                <i className="fa fa-dashboard"></i> Dashboard
+              <Link tag="a" className="" to="/user">
+                <i className="fa fa-user"></i> User
               </Link>
             </li>
             <li className="mb-1">
-              <Link tag="a" className="" to="/blank-page">
-                <i className="fa fa-file-o"></i> Blank Page
+              <Link tag="a" className="" to="/character">
+                <i className="fa fa-dashboard"></i> Characters
               </Link>
             </li>
-            <li className="border-top my-3"></li>
             <li className="mb-1">
-              <Link tag="a" className="" to="/typography">
-                <i className="fa fa-text-width" aria-hidden="true"></i>{" "}
-                Typography
+              <Link tag="a" className="" to="/ads">
+                <i className="fa fa-file-o"></i> Ads
               </Link>
             </li>
-
-            {/* collapsable list item example */}
-            {/* <li className="mb-1">
-                        <button className="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
-                        Opportunity
-                        </button>
-                        <div className="collapse" id="dashboard-collapse">
-                        <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                            <li><a href="#" className="rounded">Overview</a></li>
-                            <li><a href="#" className="rounded">Weekly</a></li>
-                            <li><a href="#" className="rounded">Monthly</a></li>
-                            <li><a href="#" className="rounded">Annually</a></li>
-                        </ul>
-                        </div>
-                    </li> 
-                    <li className="border-top my-3"></li> */}
+            <li className="mb-1">
+              <Link tag="a" className="" to="/item">
+                <i className="fa fa-text-width" aria-hidden="true"></i> Items
+              </Link>
+            </li>
+            <li className="mb-1">
+              <Link tag="a" className="" to="/nft">
+                <i className="fa fa-pencil"></i> NFT information
+              </Link>
+            </li>
+            <li className="mb-1">
+              <Link tag="a" className="" to="/wallet">
+                <i className="fa fa-calendar"></i> Wallet information
+              </Link>
+            </li>
+            <li className="mb-1">
+              <Link tag="a" className="" to="/transaction">
+                <i className="fa fa-mobile"></i> Transaction History
+              </Link>
+            </li>
+            <li className="mb-1">
+              <Link tag="a" className="" to="/whitelist">
+                <i className="fa fa-check"></i> Whitelist Wallet
+              </Link>
+            </li>
+            <li className="mb-1">
+              <Link tag="a" className="" to="/server">
+                <i className="fa fa-laptop" aria-hidden="true"></i> Servers
+              </Link>
+            </li>
           </ul>
         </PerfectScrollbar>
         <div className="dropdown fixed-bottom-dropdown">
@@ -73,20 +86,20 @@ class Sidebar extends React.Component {
               height="32"
               className="rounded-circle me-2"
             />
-            <span>Tarun Dhiman</span>
+            <span>Admin</span>
           </a>
           <ul
             className="dropdown-menu text-small shadow"
             aria-labelledby="dropdownUser2"
           >
-            <li>
+            {/* <li>
               <Link className="dropdown-item" to="/profile">
                 <i className="fa fa-user-circle" aria-hidden="true"></i> Profile
               </Link>
             </li>
             <li>
               <hr className="dropdown-divider" />
-            </li>
+            </li> */}
             <li>
               <Link className="dropdown-item" to="/login">
                 <i className="fa fa-sign-out" aria-hidden="true"></i> Sign out

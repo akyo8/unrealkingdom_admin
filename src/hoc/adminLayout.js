@@ -46,7 +46,7 @@ const adminLayout = (ChildComponent) => {
           {/* <!-- Page content wrapper--> */}
           <div className="main" id="page-content-wrapper">
             {/* <!-- Top navigation--> */}
-            <Header />
+            {/* <Header /> */}
             {/* <!-- Page content--> */}
             <div className="container-fluid content-container">
               <ChildComponent {...this.props} />

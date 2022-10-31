@@ -1,30 +1,35 @@
-@import url('./variables.css');
+@import url("./variables.css");
 
 body {
-    margin: 0;
-    font-family:  var(--default-font-regular);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    letter-spacing: var(--default-letter-spacing);
-    line-height: var(--default-line-height);
-    background-color: var(--content-background-color);
-    overflow-x: hidden;
-    padding: 0;
-    margin: 0;
-    color: var(--black);
+  margin: 0;
+  font-family: var(--default-font-regular);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: var(--default-letter-spacing);
+  line-height: var(--default-line-height);
+  background-color: var(--content-background-color);
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  color: var(--black);
 }
 
-table, td, tr, th {
+table,
+td,
+tr,
+th {
   border: 0;
   border-spacing: 0;
 }
-  
+
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-a, a:hover, a:focus {
+a,
+a:hover,
+a:focus {
   color: inherit;
   text-decoration: none;
   transition: all 0.3s;
@@ -57,7 +62,7 @@ ul ul a {
 
 /* The navigation menu links */
 .sidenav a {
-  padding: .25rem .5rem;
+  padding: 0.25rem 0.5rem;
   text-decoration: none;
   font-size: 15px;
   color: var(--sidenav-color);
@@ -99,11 +104,13 @@ ul ul a {
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 0px;}
-  .sidenav a {font-size: 15px;}
+  .sidenav {
+    padding-top: 0px;
+  }
+  .sidenav a {
+    font-size: 15px;
+  }
 }
-
-
 
 .content-container {
   margin-top: 60px;
@@ -118,32 +125,41 @@ ul ul a {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+  background: #f1f1f1;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888; 
+  background: #888;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+  background: #555;
 }
 
 /* typography */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--default-font-semibold);
   line-height: 22px !important;
 }
 
-p, span, a {
+p,
+span,
+a {
   font-family: var(--default-font-regular);
   line-height: 22px !important;
 }
 
-.sidenav p.bold, .sidenav span.bold, .sidenav a.bold {
+.sidenav p.bold,
+.sidenav span.bold,
+.sidenav a.bold {
   font-family: var(--sidenav-active-font);
   line-height: 22px !important;
 }
@@ -156,20 +172,22 @@ h2 {
   font-size: 16px;
 }
 
-p{
+p {
   font-size: 14px;
 }
 
-.form-control:focus, .form-select:focus, .form-check-input:focus {
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
   outline: 0;
   box-shadow: unset !important;
 }
 
-.form-control::placeholder{
+.form-control::placeholder {
   color: var(--grey);
 }
 
-button:focus{
+button:focus {
   outline: 0 !important;
   box-shadow: unset !important;
 }
@@ -180,19 +198,22 @@ button:focus{
   flex-shrink: 0;
   width: 1.5rem;
   height: 100vh;
-  background-color: rgba(0, 0, 0, .1);
-  border: solid rgba(0, 0, 0, .15);
+  background-color: rgba(0, 0, 0, 0.1);
+  border: solid rgba(0, 0, 0, 0.15);
   border-width: 1px 0;
-  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+    inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
 }
 
 .bi {
-  vertical-align: -.125em;
+  vertical-align: -0.125em;
   pointer-events: none;
   fill: currentColor;
 }
 
-.dropdown-toggle { outline: 0; }
+.dropdown-toggle {
+  outline: 0;
+}
 
 .nav-flush .nav-link {
   border-radius: 0;
@@ -201,13 +222,13 @@ button:focus{
 .sidenav .btn-toggle {
   display: inline-flex;
   align-items: center;
-  padding: .25rem .5rem;
+  padding: 0.25rem 0.5rem;
   font-weight: normal;
   color: var(--sidenav-active-color);
   background-color: transparent;
   border: 0;
   font-family: var(--sidenav-active-font);
-  letter-spacing: .03em;
+  letter-spacing: 0.03em;
   font-size: 15px;
 }
 
@@ -220,8 +241,8 @@ button:focus{
   width: 1.25em;
   line-height: 0;
   content: ">" !important;
-  transition: transform .35s ease;
-  transform-origin: .5em 50%;
+  transition: transform 0.35s ease;
+  transform-origin: 0.5em 50%;
   color: var(--sidenav-color);
 }
 
@@ -240,8 +261,8 @@ button:focus{
 
 .sidenav .btn-toggle-nav a {
   display: inline-flex;
-  padding: .1875rem .5rem;
-  margin-top: .125rem;
+  padding: 0.1875rem 0.5rem;
+  margin-top: 0.125rem;
   margin-left: 1.25rem;
   text-decoration: none;
 }
@@ -250,7 +271,8 @@ button:focus{
   background-color: #d2f4ea;
 }
 
-.sidenav .btn-toggle-nav a:hover, .sidenav .btn-toggle-nav a:focus {
+.sidenav .btn-toggle-nav a:hover,
+.sidenav .btn-toggle-nav a:focus {
   color: var(--sidenav-active-color);
   font-family: var(--sidenav-active-font);
 }
@@ -264,8 +286,12 @@ button:focus{
   overflow-y: auto;
 }
 
-.fw-semibold { font-weight: 600; }
-.lh-tight { line-height: 1.25; }
+.fw-semibold {
+  font-weight: 600;
+}
+.lh-tight {
+  line-height: 1.25;
+}
 
 ul ul a {
   font-size: 0.9em !important;
@@ -273,7 +299,8 @@ ul ul a {
   background: transparent !important;
 }
 
-.sidenav .btn-toggle:hover, .sidenav .btn-toggle:focus {
+.sidenav .btn-toggle:hover,
+.sidenav .btn-toggle:focus {
   color: var(--sidenav-active-color);
   background-color: transparent !important;
 }
@@ -282,7 +309,7 @@ ul ul a {
   font-family: var(--sidenav-active-font);
 }
 
-.fixed-bottom-dropdown{
+.fixed-bottom-dropdown {
   font-weight: normal !important;
   position: fixed;
   background-color: var(--sidenav-background-color);
@@ -291,7 +318,7 @@ ul ul a {
   right: 0px;
   margin-bottom: 0px;
   width: 200px;
-  border-top: 1px solid rgb(211,211,211);
+  border-top: 1px solid rgb(211, 211, 211);
   padding: 5px 5px;
 }
 
@@ -299,7 +326,7 @@ ul ul a {
   font-family: var(--sidenav-normal-font);
   color: var(--sidenav-color);
   font-size: 15px;
-  letter-spacing: .03em;
+  letter-spacing: 0.03em;
 }
 
 .sidenav .fixed-bottom-dropdown a {
@@ -309,12 +336,12 @@ ul ul a {
   font-weight: normal !important;
 }
 
-.sidenav .fixed-bottom-dropdown .dropdown-item{
+.sidenav .fixed-bottom-dropdown .dropdown-item {
   color: var(--theme-color) !important;
 }
 
 .sidenav .btn-toggle-nav a {
-  margin-left: .5rem !important;
+  margin-left: 0.5rem !important;
 }
 
 .form-label {
@@ -322,12 +349,12 @@ ul ul a {
   color: var(--bs-gray);
 }
 
-input::placeholder{
+input::placeholder {
   font-family: var(--default-font-regular);
   font-weight: normal !important;
 }
 
-button{
+button {
   font-family: var(--default-font-regular);
 }
 
@@ -343,11 +370,13 @@ button{
   font-family: var(--default-font-regular);
 }
 
-.sidenav .dropdown-item.active, .dropdown-item:active {
+.sidenav .dropdown-item.active,
+.dropdown-item:active {
   background-color: transparent !important;
 }
 
-.sidenav .dropdown-item:hover, .dropdown-item:focus {
+.sidenav .dropdown-item:hover,
+.dropdown-item:focus {
   color: var(--theme-color);
   background-color: transparent !important;
   font-family: var(--sidenav-active-font) !important;
@@ -391,7 +420,7 @@ button{
   background-color: var(--blue-dark) !important;
 }
 
-.bg-body h6{
+.bg-body h6 {
   color: var(--secondary-color);
 }
 
@@ -417,9 +446,9 @@ button{
   width: 400px;
   height: 100%;
   -webkit-transform: translate3d(0%, 0, 0);
-      -ms-transform: translate3d(0%, 0, 0);
-       -o-transform: translate3d(0%, 0, 0);
-          transform: translate3d(0%, 0, 0);
+  -ms-transform: translate3d(0%, 0, 0);
+  -o-transform: translate3d(0%, 0, 0);
+  transform: translate3d(0%, 0, 0);
 }
 
 .modal.left .modal-content,
@@ -434,25 +463,25 @@ button{
 }
 
 /*Left*/
-.modal.left.fade .modal-dialog{
+.modal.left.fade .modal-dialog {
   left: 0px;
   -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
-     -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
-       -o-transition: opacity 0.3s linear, left 0.3s ease-out;
-          transition: opacity 0.3s linear, left 0.3s ease-out;
+  -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+  -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+  transition: opacity 0.3s linear, left 0.3s ease-out;
 }
 
-.modal.left.fade.in .modal-dialog{
+.modal.left.fade.in .modal-dialog {
   left: 0;
 }
-      
+
 /*Right*/
 .modal.right.fade .modal-dialog {
   right: 0px;
   -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
-     -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
-       -o-transition: opacity 0.3s linear, right 0.3s ease-out;
-          transition: opacity 0.3s linear, right 0.3s ease-out;
+  -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+  -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+  transition: opacity 0.3s linear, right 0.3s ease-out;
 }
 
 .modal.right.fade.in .modal-dialog {
@@ -466,7 +495,7 @@ button{
 }
 
 .modal-header {
-  border-bottom-color: #EEEEEE;
+  border-bottom-color: #eeeeee;
   background-color: var(--theme-color);
   color: var(--white);
   border-radius: 0;
@@ -503,13 +532,18 @@ button{
   background-color: #fff;
   width: 100%;
   max-width: 100%;
-  border-top: .2rem solid #d8dbe0;
-  padding: .5rem;
-  border-radius: .3rem;
+  border-top: 0.2rem solid #d8dbe0;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
 }
 
-.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
-  padding: .8rem;
+.table > tbody > tr > td,
+.table > tbody > tr > th,
+.table > tfoot > tr > td,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > thead > tr > th {
+  padding: 0.8rem;
   line-height: 1.42857143;
 }
 
@@ -520,21 +554,25 @@ table thead th {
   padding-bottom: 5px;
 }
 
-.table>thead>tr>th {
-  border-bottom: .12rem solid #f2f2f2;
+.table > thead > tr > th {
+  border-bottom: 0.12rem solid #f2f2f2;
   border-bottom-color: #f2f2f2 !important;
 }
 
 table tbody td {
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
-table tbody tr:focus-within, table tbody tr:hover {
+table tbody tr:focus-within,
+table tbody tr:hover {
   background-color: #f5f5f5;
 }
 
-.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th {
-  border-top: .1rem solid #ebedef;
+.table > tbody > tr > td,
+.table > tbody > tr > th,
+.table > tfoot > tr > td,
+.table > tfoot > tr > th {
+  border-top: 0.1rem solid #ebedef;
 }
 
 .table-action-dropdown .dropdown-toggle {
@@ -544,7 +582,7 @@ table tbody tr:focus-within, table tbody tr:hover {
   border-radius: 12px;
 }
 
-.table-action-dropdown .dropdown-toggle:hover, 
+.table-action-dropdown .dropdown-toggle:hover,
 .table-action-dropdown .dropdown-toggle:focus {
   background: var(--theme-color);
   color: #fff;
@@ -552,14 +590,14 @@ table tbody tr:focus-within, table tbody tr:hover {
 }
 
 .table-action-dropdown .dropdown-toggle::after {
-  content:none;
+  content: none;
 }
 
 .table-action-dropdown .dropdown-item {
   color: var(--theme-color);
 }
 
-.table-action-dropdown .dropdown-item:hover, 
+.table-action-dropdown .dropdown-item:hover,
 .table-action-dropdown .dropdown-item:focus {
   background: transparent;
   font-family: var(--default-font-semibold);
@@ -569,23 +607,23 @@ table tbody tr:focus-within, table tbody tr:hover {
   text-align: center !important;
 }
 
-.table-bottom-center-pagination .pagination{
+.table-bottom-center-pagination .pagination {
   display: inline-flex !important;
 }
 
-.table-bottom-center-pagination .pagination .page-link{
+.table-bottom-center-pagination .pagination .page-link {
   color: var(--theme-color);
 }
 
 .table-bottom-center-pagination .pagination .page-link:hover,
-.table-bottom-center-pagination .pagination .page-link:focus{
+.table-bottom-center-pagination .pagination .page-link:focus {
   color: var(--secondary-color);
   background: var(--theme-color);
 }
 
 .table-container {
   margin-top: 10px !important;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 .low-height-btn {
@@ -602,12 +640,13 @@ table tbody tr:focus-within, table tbody tr:hover {
 }
 
 .modal-footer {
-  padding: 0.4rem .75rem !important;
+  padding: 0.4rem 0.75rem !important;
   border-bottom-right-radius: 0px !important;
   border-bottom-left-radius: 0px !important;
   background: var(--light-grey);
 }
 
-.modal.left .modal-body, .modal.right .modal-body {
+.modal.left .modal-body,
+.modal.right .modal-body {
   padding: 15px 15px 15px;
 }
